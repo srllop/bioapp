@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+<div>
+    <h3>Sequence comparison </h3>
+    <br>
+    <p>The input sequence 1 was</p>
+    <p class="sequence">{{ input_text1 }}</p>
+    <br>
+    <p>The input sequence 2 was</p>
+    <p class="sequence">{{ input_text2 }}</p>
+    <br>
+    <p>The possible alignments are</p>
+</div>
+<div>
+    {% for alignment in output_text %}
+
+    <p class="sequence">{{ alignment }}</p>
+    {% endfor %}
+</div>
+{% endblock %}
